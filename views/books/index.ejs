@@ -8,26 +8,28 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <header>
-      <h1>Book Collection</h1>
-      <% if (user) { %>
-      <p>Hello, <%= user.username.toUpperCase() %></p>
-      <% } else { %>
-      <a href="/auth/sign-up">Sign Up</a> | <a href="/auth/sign-in">Sign In</a>
-      <% } %>
-    </header>
+    <div class="show-container">
+      <header>
+        <p>Hello, <%= user.username.toUpperCase() %></p>
+        <h1 class="h1-index">Book Collection</h1>
+        <% if (user) { %>
+        <% } else { %>
+        <a href="/auth/sign-up">Sign Up</a> |
+        <a href="/auth/sign-in">Sign In</a>
+        <% } %>
+      </header>
 
-    <main>
-      <h2>Available Books</h2>
-      <ul>
-        <% books.forEach(book => { %>
-        <li>
-          <h3><%= book.title %></h3>
-          <p>By <%= book.author %></p>
-          <p><a href="/books/<%= book._id %>">View Details</a></p>
-        </li>
-        <% }) %>
-      </ul>
-    </main>
+      <main>
+        <ul>
+          <% books.forEach(book => { %>
+          <li>
+            <a class="book-link" href="/books/<%= book._id %>"><h3><%= book.title %></h3></a>
+            <p>By <%= book.author %></p>
+            </p>
+          </li>
+          <% }) %>
+        </ul>   
+      </main>
+    </div>
   </body>
 </html>

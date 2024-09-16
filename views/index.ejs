@@ -8,15 +8,48 @@
   </head>
   <body class="home-body">
     <%- include('./partials/_navbar.ejs') %>
+    <div class="hero-section"></div>
     <div class="container">
-      <header class="home-header">
-        <h1>Welcome to the Book Review App!</h1>
-      </header>
-
-      <main class="home-main">
-        <h2>Explore our Book Collection</h2>
-        <p><a class="home-a" href="/books">View Books</a></p>
-      </main>
+      <div class="discover-container">
+        <div>
+          <h1>Discover Your Next Favorite Book</h1>
+          <p>Join us today and explore a world of books and reviews.</p>
+        </div>
+      </div>
+      <div class="feature-container">
+        <div class="feature-item">
+          <h3>Browse Books</h3>
+          <p>Get book recommendations tailored to your reading preferences.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Write and Share Reviews</h3>
+          <p>Share your thoughts and read reviews from other book lovers.</p>
+        </div>
+      </div>
+      <div class="testimonial-section">
+        <h2>What Our Users Are Saying</h2>
+        <div class="testimonial-item">
+          <p>
+            "This is the best book review site I've ever used. The
+            recommendations are spot-on and I love sharing my own reviews!"
+          </p>
+          <cite>- Andrew</cite>
+        </div>
+        <div class="testimonial-item">
+          <p>
+            "I found my next favorite book thanks to this site. It's easy to use
+            and the reviews are very helpful."
+          </p>
+          <cite>- Sarah</cite>
+        </div>
+      </div>
+      <% if (!user) { %>
+      <div class="cta-section">
+        <h2>Ready to Explore?</h2>
+        <p>Create an account now and start exploring our book collection!</p>
+        <a href="/auth/sign-up" class="cta-button">Sign Up</a>
+      </div>
+      <% } %>
     </div>
   </body>
 </html>
