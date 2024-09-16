@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo">Home</a>
+    <a href="/books">Books</a>
+    <% if (user) { %>
+    <a href="/books/new">Add New Book</a>
+    <a href="/auth/sign-out">Logout</a>
+    <% } else { %>
+    <a href="/auth/sign-up">Sign Up</a>
+    <a href="/auth/sign-in">Sign In</a>
+    <% } %>
+  </div>
+</nav>

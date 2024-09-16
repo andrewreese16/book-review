@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit <%= book.title %></title>
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
+    <%- include('../partials/_navbar.ejs') %>
     <header>
       <h1>Edit <%= book.title %></h1>
       <% if (user) { %>

@@ -1,0 +1,131 @@
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.navbar a:hover {
+  background-color: #575757;
+  color: #ffffff;
+}
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+.home-header,
+.home-main,
+.home-body,
+.home-a {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: lightgrey;
+  text-decoration: none;
+}
+.home-a {
+  box-sizing: border-box;
+  border-radius: 4%;
+  background-color: #28a745;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+}
+.home-a:hover {
+  background-color: #218838;
+}
+
+.sign-in-page,
+.sign-in-page h1,
+.sign-in-page form,
+.sign-in-page input,
+.sign-in-page button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sign-in-page {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.sign-in-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+.sign-in-container h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.sign-in-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sign-in-container label {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.sign-in-container input[type="text"],
+.sign-in-container input[type="password"] {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.sign-in-container button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.sign-in-container button:hover {
+  background-color: #0056b3;
+}
+
+p.description {
+  width: 30%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}

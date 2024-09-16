@@ -33,7 +33,7 @@ router.post("/", async function (req, res) {
   }
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", async function(req, res) {
   try {
     console.log("Fetching book with ID:", req.params.id); // Log the book ID
     const book = await BookModel.findById(req.params.id);

@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Books Collection</title>
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
+    <%- include('../partials/_navbar.ejs') %>
     <header>
       <h1>Book Collection</h1>
       <% if (user) { %>
-      <p>Hello, <%= user.username %>! <a href="/auth/sign-out">Logout</a></p>
+      <p>Hello, <%= user.username.toUpperCase() %></p>
       <% } else { %>
       <a href="/auth/sign-up">Sign Up</a> | <a href="/auth/sign-in">Sign In</a>
       <% } %>
@@ -27,12 +28,6 @@
         </li>
         <% }) %>
       </ul>
-
-      <% if (user) { %>
-      <p><a href="/books/new">Add a New Book</a></p>
-      <% } else { %>
-      <p><a href="/auth/sign-in">Sign in to add a book</a></p>
-      <% } %>
     </main>
   </body>
 </html>
