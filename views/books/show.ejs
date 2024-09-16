@@ -32,7 +32,7 @@
         <h2>Reviews</h2>
         <% book.review.forEach(function(review) { %>
         <div>
-          <p class="review"><strong><%= review.username %></strong>: <%= review.content %></p>
+          <p class="review"><strong><%= review.username.toUpperCase() %></strong>: <%= review.content %></p>
           <p class="rating">Rating: <%= review.rating %></p>
 
           <!-- Delete review button for the review owner -->
