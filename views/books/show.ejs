@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= book.title %></title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1><%= book.title %> by <%= book.author %></h1>
+      <% if (user) { %>
+      <p>Hello, <%= user.username %>! <a href="/auth/sign-out">Logout</a></p>
+      <% } else { %>
+      <a href="/auth/sign-up">Sign Up</a> | <a href="/auth/sign-in">Sign In</a>
+      <% } %>
+      <a href="/">Back to Home</a>
+      <a href="/books/new">Add New Book</a>
+    </header>
+
+    <main>
+      <p><%= book.description %></p>
+
+      <% if (user && book.user && book.user.equals(user._id)) { %>
+      <p>
+      </p>
+      <form action="/books/<%= book._id %>/edit" method="GET">
+        <button type="submit">Edit Book</button>
+      </form>
+      <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Book</button>
+      </form>
+      <% } %>
+
+      <h2>Reviews</h2>
+      <% book.review.forEach(function(review) { %>
+      <div>
+        <p><strong><%= review.username %></strong>: <%= review.content %></p>
+        <p>Rating: <%= review.rating %></p>
+
+        <!-- Delete review button for the review owner -->
+        <% if (user && review.user.equals(user._id)) { %>
+        <form
+          action="/books/<%= book._id %>/reviews/<%= review._id %>?_method=DELETE"
+          method="POST"
+        >
+          <button type="submit">Delete Review</button>
+        </form>
+        <% } %>
+      </div>
+      <% }); %>
+
+      <!-- Form to add a new review if user is logged in -->
+      <% if (user) { %>
+      <h3>Add a Review</h3>
+      <form action="/books/<%= book._id %>/reviews" method="POST">
+        <textarea name="content" required></textarea>
+        <label for="rating">Rating: </label>
+        <input type="number" name="rating" min="1" max="5" required />
+        <button type="submit">Submit Review</button>
+      </form>
+      <% } else { %>
+      <p>You must <a href="/auth/signin">sign in</a> to add a review.</p>
+      <% } %>
+    </main>
+  </body>
+</html>

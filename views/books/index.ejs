@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Collection</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Book Collection</h1>
+      <% if (user) { %>
+      <p>Hello, <%= user.username %>! <a href="/auth/sign-out">Logout</a></p>
+      <% } else { %>
+      <a href="/auth/sign-up">Sign Up</a> | <a href="/auth/sign-in">Sign In</a>
+      <% } %>
+    </header>
+
+    <main>
+      <h2>Available Books</h2>
+      <ul>
+        <% books.forEach(book => { %>
+        <li>
+          <h3><%= book.title %></h3>
+          <p>By <%= book.author %></p>
+          <p><a href="/books/<%= book._id %>">View Details</a></p>
+        </li>
+        <% }) %>
+      </ul>
+
+      <% if (user) { %>
+      <p><a href="/books/new">Add a New Book</a></p>
+      <% } else { %>
+      <p><a href="/auth/sign-in">Sign in to add a book</a></p>
+      <% } %>
+    </main>
+  </body>
+</html>
