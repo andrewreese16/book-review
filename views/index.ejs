@@ -8,24 +8,33 @@
   </head>
   <body class="home-body">
     <%- include('./partials/_navbar.ejs') %>
-    <div class="hero-section"></div>
-    <div class="container">
-      <div class="discover-container">
-        <div>
-          <h1>Discover Your Next Favorite Book</h1>
-          <p>Join us today and explore a world of books and reviews.</p>
-        </div>
+
+    <div class="hero-section">
+      <div class="hero-content">
+        <h1>Discover Your Next Favorite Book</h1>
+        <p>Join us today and explore a world of books and reviews.</p>
+        <% if (!user) { %>
+        <a href="/auth/sign-up" class="hero-button">Get Started</a>
+        <% } %>
       </div>
+    </div>
+
+    <div class="container">
       <div class="feature-container">
         <div class="feature-item">
           <h3>Browse Books</h3>
-          <p>Get book recommendations tailored to your reading preferences.</p>
+          <p>Get book recommendations you may not have known about before.</p>
         </div>
         <div class="feature-item">
           <h3>Write and Share Reviews</h3>
           <p>Share your thoughts and read reviews from other book lovers.</p>
         </div>
+        <div class="feature-item">
+          <h3>Join the Community</h3>
+          <p>Connect with fellow readers and discover new perspectives.</p>
+        </div>
       </div>
+
       <div class="testimonial-section">
         <h2>What Our Users Are Saying</h2>
         <div class="testimonial-item">
@@ -33,16 +42,17 @@
             "This is the best book review site I've ever used. The
             recommendations are spot-on and I love sharing my own reviews!"
           </p>
-          <cite>- Andrew</cite>
+          - Andrew
         </div>
         <div class="testimonial-item">
           <p>
             "I found my next favorite book thanks to this site. It's easy to use
             and the reviews are very helpful."
           </p>
-          <cite>- Sarah</cite>
+          - Sarah
         </div>
       </div>
+
       <% if (!user) { %>
       <div class="cta-section">
         <h2>Ready to Explore?</h2>

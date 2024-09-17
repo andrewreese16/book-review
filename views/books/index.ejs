@@ -5,31 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Books Collection</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/books-collection.css" />
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <div class="show-container">
-      <header>
-        <p>Hello, <%= user.username.toUpperCase() %></p>
-        <h1 class="h1-index">Book Collection</h1>
-        <% if (user) { %>
-        <% } else { %>
-        <a href="/auth/sign-up">Sign Up</a> |
-        <a href="/auth/sign-in">Sign In</a>
-        <% } %>
-      </header>
 
-      <main>
-        <ul>
+    <div class="hero hero--books">
+      <div class="container">
+        <% if (user) { %>
+        <p>Hello, <%= user.username.toUpperCase() %></p>
+        <% } %>
+        <h1>Explore Our Book Collection</h1>
+        <p>Browse through a collection of amazing books!</p>
+        <% if (!user) { %>
+        <a href="/auth/sign-up" class="btn btn-primary">Sign Up</a>
+        <a href="/auth/sign-in" class="btn btn-secondary">Sign In</a>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h2>Book Collection</h2>
+        <ul class="book-list">
           <% books.forEach(book => { %>
-          <li>
-            <a class="book-link" href="/books/<%= book._id %>"><h3><%= book.title %></h3></a>
-            <p>By <%= book.author %></p>
-            </p>
+          <li class="book-item">
+            <a class="book-link" href="/books/<%= book._id %>">
+              <h3><%= book.title %></h3>
+              <p>By <%= book.author %></p>
+            </a>
           </li>
           <% }) %>
-        </ul>   
-      </main>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

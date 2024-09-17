@@ -1,13 +1,13 @@
 <nav class="navbar">
   <div class="container">
-    <a href="/" class="logo">Home</a>
-    <a href="/books">Books</a>
+    <a href="/" class="navbar__link navbar__link--logo">Home</a>
+    <a href="/books" class="navbar__link">Books</a>
     <% if (user) { %>
-    <a href="/books/new">Add New Book</a>
-    <a href="/auth/sign-out">Logout</a>
+    <a href="/books/new" class="navbar__link">Add New Book</a>
+    <a href="/auth/sign-out" class="navbar__link">Logout</a>
     <% } else { %>
-    <a href="/auth/sign-up">Sign Up</a>
-    <a href="/auth/sign-in">Sign In</a>
+    <a href="/auth/sign-up" class="navbar__link">Sign Up</a>
+    <a href="/auth/sign-in" class="navbar__link">Sign In</a>
     <% } %>
   </div>
 </nav>

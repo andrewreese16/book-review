@@ -1,0 +1,139 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.card h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.book-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+button.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color var(--transition);
+  margin-top: 10px;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  max-width: 200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+button.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+}
+
+button.btn-secondary:hover {
+  background-color: #218838;
+}
+
+button.btn-danger {
+  background-color: var(--danger-color);
+  color: var(--light-text);
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.review-item {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.review-item p {
+  margin: 5px 0;
+}
+
+.review-item strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h1 {
+    font-size: 1.5rem;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+}
