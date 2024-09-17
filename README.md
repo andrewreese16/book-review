@@ -48,22 +48,19 @@ Clone the repository:
 ```bash
 git clone https://github.com/your-username/book-review-app.git
 cd book-review-app
-Install dependencies:
 ```
-
+Install dependencies:
 ```bash
 npm install
-Create a .env file:
 ```
-
+Create a .env file:
 Copy the .env.example file to .env and update it with your configuration settings.
 
 ```bash
 cp .env.example .env
-Start the application:
 ```
-
+Start the application:
 ``` bash
 npm start
-The app will be available at http://localhost:3000.
 ```
+The app will be available at http://localhost:3000.
