@@ -71,6 +71,7 @@ body {
   text-decoration: none;
   border-radius: var(--border-radius);
   transition: background-color var(--transition);
+  cursor: pointer;
 }
 
 .hero-button:hover {
@@ -171,6 +172,15 @@ body {
   .hero-section p {
     font-size: 1rem;
   }
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: 10px 0;
+  }
 }
 .navbar {
   background-color: var(--dark-bg);
@@ -188,25 +198,9 @@ body {
   text-decoration: none;
   padding: 8px 16px;
   transition: background-color var(--transition);
+  cursor: pointer;
 }
 
 .navbar__link:hover {
   background-color: #575757;
-}
-
-.navbar__link--logo {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-@media (max-width: 768px) {
-  .navbar .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar__link {
-    display: block;
-    padding: 10px 0;
-  }
 }

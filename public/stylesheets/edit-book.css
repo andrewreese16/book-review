@@ -62,11 +62,13 @@ form {
   text-align: center;
   transition: background-color var(--transition);
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--light-text);
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -76,6 +78,7 @@ form {
 .btn-secondary {
   background-color: var(--secondary-color);
   color: var(--light-text);
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -85,6 +88,7 @@ form {
 .btn-back {
   display: inline-block;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
