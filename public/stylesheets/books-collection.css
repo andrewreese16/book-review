@@ -1,5 +1,5 @@
 .hero--books {
-  background: url("/assets/your-hero-image.jpg") no-repeat center center/cover;
+  background: url("/public/assets/lib3.avif") no-repeat center center/cover;
   height: 400px;
   color: var(--light-text);
   display: flex;
@@ -9,15 +9,15 @@
   position: relative;
 }
 
-.hero--books::before {
+/* .hero--books::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
+  background: url('/public/assets/lib3.avif') no-repeat center center/cover;
+} */
 
 .hero--books .container {
   z-index: 1;

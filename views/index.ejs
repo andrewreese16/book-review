@@ -12,7 +12,9 @@
     <div class="hero-section">
       <div class="hero-content">
         <h1>Discover Your Next Favorite Book</h1>
-        <p>Join us today and explore a world of books and reviews.</p>
+        <% if (!user) { %>
+          <p>Join us today and explore a world of books and reviews.</p>
+        <% } %>
         <% if (!user) { %>
         <a href="/auth/sign-up" class="hero-button">Get Started</a>
         <% } %>

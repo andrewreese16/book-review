@@ -9,14 +9,13 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-
-    <div class="hero hero--books">
+<div class="full-container">
+    <div class="hero-hero--books">
       <div class="container">
         <% if (user) { %>
         <p>Hello, <%= user.username.toUpperCase() %></p>
         <% } %>
-        <h1>Explore Our Book Collection</h1>
-        <p>Browse through a collection of amazing books!</p>
+        <h1>Browse through a collection of amazing books!</h1>
         <% if (!user) { %>
         <a href="/auth/sign-up" class="btn btn-primary">Sign Up</a>
         <a href="/auth/sign-in" class="btn btn-secondary">Sign In</a>
@@ -39,5 +38,6 @@
         </ul>
       </div>
     </div>
+  </div>
   </body>
 </html>
