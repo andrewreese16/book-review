@@ -1,102 +1,128 @@
+/* General Container */
+.new-body{
+  background: url('/assets/books.jpeg');
+}
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Card */
 .card {
   padding: 20px;
-  background-color: #fff;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  background-color: #ffffff; /* Clean white background */
+  border-radius: 10px; /* Softer rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
   margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Card Header */
 .card h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: bold;
+  font-size: 1.875rem; /* Slightly smaller font size for a modern look */
+  margin-bottom: 15px;
+  font-weight: 600; /* Medium weight for a clean look */
+  color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 10px;
 }
 
+/* Authentication Links */
 .auth-links {
   margin-bottom: 20px;
 }
 
 .auth-links .btn {
-  margin-right: 10px;
+  margin-right: 12px; /* Maintain spacing */
 }
 
+/* Book Form */
 .book-form {
   display: flex;
   flex-direction: column;
 }
 
+/* Form Groups */
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-color);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: var(--border-radius);
+  padding: 12px;
+  border: 1px solid #dcdcdc; /* Lighter border for a softer look */
+  border-radius: 8px; /* Consistent with button */
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
+/* Textarea */
 .form-group textarea {
   resize: vertical;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: var(--border-radius);
+  padding: 14px 28px; /* Larger button for better usability */
+  border-radius: 8px; /* Match rounded corners */
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   text-align: center;
-  transition: background-color var(--transition);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   margin-top: 10px;
+  cursor: pointer;
 }
 
+/* Primary Button */
 .btn-primary {
   background-color: var(--primary-color);
-  color: var(--light-text);
+  color: #ffffff; /* White text for contrast */
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #004a8d; /* Darker shade on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Secondary Button */
 .btn-secondary {
   background-color: var(--secondary-color);
-  color: var(--light-text);
+  color: #ffffff; /* White text for contrast */
 }
 
 .btn-secondary:hover {
-  background-color: #218838;
+  background-color: #1e7e34; /* Darker shade on hover */
 }
 
+/* Back Button */
 .btn-back {
   display: inline-block;
   margin-top: 20px;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    padding: 10px;
+    padding: 15px; /* Slightly less padding on smaller screens */
   }
 
   .card {
-    padding: 15px;
+    padding: 15px; /* Adjusted padding for mobile */
   }
 
   .card h1 {

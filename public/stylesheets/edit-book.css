@@ -1,3 +1,6 @@
+.edit-body{
+  background: url("/assets/book2.jpeg") no-repeat center center/cover;;
+}
 .container {
   max-width: 800px;
   margin: 0 auto;

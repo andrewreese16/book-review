@@ -7,37 +7,36 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/books-collection.css" />
   </head>
-  <body>
+  <body class="book-index">
     <%- include('../partials/_navbar.ejs') %>
-<div class="full-container">
-    <div class="hero-hero--books">
-      <div class="container">
+    <header class="hero">
+      <div class="hero-content">
         <% if (user) { %>
-        <p>Hello, <%= user.username.toUpperCase() %></p>
+        <p class="welcome-message">Hello, <%= user.username.toUpperCase() %></p>
         <% } %>
-        <h1>Browse through a collection of amazing books!</h1>
+        <h1 class="welcome-message">
+          Explore Our Collection of Amazing Books!
+        </h1>
         <% if (!user) { %>
-        <a href="/auth/sign-up" class="btn btn-primary">Sign Up</a>
-        <a href="/auth/sign-in" class="btn btn-secondary">Sign In</a>
+        <div class="cta-buttons">
+          <a href="/auth/sign-up" class="btn btn-primary">Sign Up</a>
+          <a href="/auth/sign-in" class="btn btn-secondary">Sign In</a>
+        </div>
         <% } %>
       </div>
-    </div>
+    </header>
 
-    <div class="container">
-      <div class="card">
-        <h2>Book Collection</h2>
-        <ul class="book-list">
-          <% books.forEach(book => { %>
-          <li class="book-item">
-            <a class="book-link" href="/books/<%= book._id %>">
-              <h3><%= book.title %></h3>
-              <p>By <%= book.author %></p>
-            </a>
-          </li>
-          <% }) %>
-        </ul>
+    <section class="book-collection">
+      <div class="book-grid">
+        <% books.forEach(book => { %>
+        <div class="book-card">
+          <a class="book-link" href="/books/<%= book._id %>">
+            <h3><%= book.title %></h3>
+            <p>By <%= book.author %></p>
+          </a>
+        </div>
+        <% }) %>
       </div>
-    </div>
-  </div>
+    </section>
   </body>
 </html>

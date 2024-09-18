@@ -15,8 +15,8 @@ User Stories for Book Review App
 
 6. As a user, I want to be able to view a list of all books so that I can browse and find books of interest.
 
-7. Review Management
-   As a logged-in user, I want to be able to add a review to a book so that I can share my thoughts and feedback with others.
+   7. Review Management
+As a logged-in user, I want to be able to add a review to a book so that I can share my thoughts and feedback with others.
 
 8. As a logged-in user, I want to be able to delete my review of a book so that I can remove my feedback if I no longer wish to share it.
 

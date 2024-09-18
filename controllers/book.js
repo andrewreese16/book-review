@@ -30,7 +30,7 @@ router.post("/", async function (req, res) {
   }
 });
 
-router.get("/:id", async function(req, res) {
+router.get("/:id", async function (req, res) {
   try {
     const book = await BookModel.findById(req.params.id);
     if (!book) {

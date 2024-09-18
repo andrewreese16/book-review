@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/sign-in-sign-up.css" />
   </head>
-  <body>
+  <body class="signin-signup-body">
     <div class="container">
       <div class="card">
         <h1>Create a New Account</h1>
+        <% if (message) { %>
+         <p class="error-message"><%= message %></p>
+        <% } %>
         <form action="/auth/sign-up" method="POST">
           <div class="form-group">
             <label for="username">Username:</label>
