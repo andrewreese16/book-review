@@ -13,9 +13,8 @@
       <div class="hero-content">
         <h1>Discover Your Next Favorite Book</h1>
         <% if (!user) { %>
-          <p>Join today and enjoy great books and reviews</p>
-        <% } %>
-        <% if (!user) { %>
+        <p>Join today and enjoy great books and reviews</p>
+        <% } %> <% if (!user) { %>
         <a href="/auth/sign-up" class="hero-button">Get Started</a>
         <% } %>
       </div>
@@ -54,13 +53,6 @@
           - Sarah
         </div>
       </div>
-
-      <% if (!user) { %>
-      <div class="cta-section">
-        <p>Create an account now and contribute to our book collection!</p>
-        <a href="/auth/sign-up" class="cta-button">Sign Up</a>
-      </div>
-      <% } %>
     </div>
   </body>
 </html>
