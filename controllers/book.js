@@ -2,6 +2,25 @@ const express = require("express");
 const router = express.Router();
 const BookModel = require("../models/book");
 
+router.get("/search", async function (req, res) {
+  try {
+    const searchQuery = req.query.q;
+    if (!searchQuery) {
+      return res.redirect("/books");
+    }
+    const books = await BookModel.find({
+      $or: [
+        { title: { $regex: searchQuery, $options: "i" } },
+        { author: { $regex: searchQuery, $options: "i" } },
+        { description: { $regex: searchQuery, $options: "i" } },
+      ],
+    });
+    res.render("books/index", { books, searchQuery });
+  } catch (err) {
+    res.status(500).send("Error searching for books");
+  }
+});
+
 router.get("/", async function (req, res) {
   try {
     const books = await BookModel.find({});

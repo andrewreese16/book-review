@@ -10,6 +10,22 @@
   <body class="book-index">
     <%- include('../partials/_navbar.ejs') %>
     <header class="hero">
+      <form action="/books/search" method="GET" class="search-form">
+        <input
+          type="text"
+          name="q"
+          placeholder="Search books..."
+          value="<%= locals.searchQuery || '' %>"
+        />
+        <button type="submit">Search</button>
+      </form>
+      <% if (locals.searchQuery) { %>
+      <p class="search-results-info">
+        Showing results for "<%= searchQuery %>".
+        <a href="/books" class="clear-search">Clear search</a>
+      </p>
+      <% } %>
+
       <div class="hero-content">
         <% if (user) { %>
         <p class="welcome-message">Hello, <%= user.username.toUpperCase() %></p>
