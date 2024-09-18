@@ -1,30 +1,27 @@
-/* General Body Styling */
+
 .show-body {
   background: url("/assets/book3.webp") no-repeat center center/cover;
   margin: 0;
   padding: 0;
 }
 
-/* Container Styling */
 .container {
   max-width: 800px;
   margin: 0 auto 20px;
   padding: 20px;
   border-radius: 10px;
-  box-sizing: border-box; /* Ensures padding does not cause overflow */
+  box-sizing: border-box;
 }
 
-/* Card Styling */
 .card {
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  box-sizing: border-box; /* Prevents overflow */
+  box-sizing: border-box;
 }
 
-/* Card Headings */
 .card h1 {
   font-size: 2rem;
   margin-bottom: 15px;
@@ -39,7 +36,6 @@
   padding-bottom: 10px;
 }
 
-/* Book Description */
 .book-description {
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -47,10 +43,9 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-/* Button Styling */
 button.btn {
   display: inline-block;
-  padding: 8px 16px; /* Adjusted padding */
+  padding: 8px 16px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -61,11 +56,10 @@ button.btn {
   border: none;
   cursor: pointer;
   max-width: 200px;
-  width: 100%; /* Ensures button fits within the container */
+  width: 100%;
   box-sizing: border-box;
 }
 
-/* Primary Button */
 button.btn-primary {
   background-color: var(--primary-color);
   color: var(--light-text);
@@ -75,7 +69,6 @@ button.btn-primary:hover {
   background-color: #0056b3;
 }
 
-/* Secondary Button */
 button.btn-secondary {
   background-color: var(--secondary-color);
   color: var(--light-text);
@@ -85,7 +78,6 @@ button.btn-secondary:hover {
   background-color: #218838;
 }
 
-/* Danger Button */
 button.btn-danger {
   background-color: var(--danger-color);
   color: var(--light-text);
@@ -95,13 +87,11 @@ button.btn-danger:hover {
   background-color: #c82333;
 }
 
-/* Form Styling */
 form {
   display: flex;
   flex-direction: column;
 }
 
-/* Form Group Styling */
 .form-group {
   margin-bottom: 15px;
 }
@@ -119,15 +109,13 @@ form {
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
-  box-sizing: border-box; /* Prevents overflow */
+  box-sizing: border-box;
 }
 
-/* Textarea */
 .form-group textarea {
   resize: vertical;
 }
 
-/* Review Item Styling */
 .review-item {
   margin-top: 20px;
   padding: 15px;
@@ -144,7 +132,6 @@ form {
   font-weight: bold;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     padding: 15px;

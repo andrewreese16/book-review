@@ -35,28 +35,7 @@
         >
           <button type="submit" class="btn btn-danger">Delete Book</button>
         </form>
-        <% } %>
-
-        <h2>Reviews</h2>
-        <% book.review.forEach(function(review) { %>
-        <div class="review-item">
-          <p>
-            <strong><%= review.username.toUpperCase() %></strong>: <%=
-            review.content %>
-          </p>
-          <p>Rating: <%= review.rating %></p>
-
-          <% if (user && review.user && review.user.equals(user._id)) { %>
-          <form
-            action="/books/<%= book._id %>/reviews/<%= review._id %>?_method=DELETE"
-            method="POST"
-            class="form-inline"
-          >
-            <button type="submit" class="btn btn-danger">Delete Review</button>
-          </form>
-          <% } %>
-        </div>
-        <% }); %> <% if (user) { %>
+        <% } %> <% if (user) { %>
         <h3>Add a Review</h3>
         <form action="/books/<%= book._id %>/reviews" method="POST">
           <div class="form-group">
@@ -85,6 +64,26 @@
         <% } else { %>
         <p>You must <a href="/auth/sign-in">sign in</a> to add a review.</p>
         <% } %>
+        <h2>Reviews</h2>
+        <% book.review.forEach(function(review) { %>
+        <div class="review-item">
+          <p>
+            <strong><%= review.username.toUpperCase() %></strong>: <%=
+            review.content %>
+          </p>
+          <p>Rating: <%= review.rating %></p>
+
+          <% if (user && review.user && review.user.equals(user._id)) { %>
+          <form
+            action="/books/<%= book._id %>/reviews/<%= review._id %>?_method=DELETE"
+            method="POST"
+            class="form-inline"
+          >
+            <button type="submit" class="btn btn-danger">Delete Review</button>
+          </form>
+          <% } %>
+        </div>
+        <% }); %>
       </div>
     </div>
   </body>

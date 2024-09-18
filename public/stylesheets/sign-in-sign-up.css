@@ -1,14 +1,13 @@
-/* General Styles */
 .signin-signup-body {
-  background: url("/assets/lib3.avif") no-repeat center center/cover;
-  min-height: 100vh; /* Ensure the background covers the full viewport */
+  background: url("/assets/signin-book.webp") no-repeat center center/cover;
+  min-height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .container {
-  max-width: 400px; /* Adjust max-width to fit your design */
+  max-width: 400px; 
   width: 100%;
   margin: 20px;
   padding: 30px;
@@ -17,10 +16,10 @@
     255,
     255,
     0.8
-  ); /* More transparent white background */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better separation */
-  text-align: center; /* Center text */
+  );
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  text-align: center; 
 }
 
 h1 {
@@ -73,7 +72,6 @@ button.btn-primary:hover {
   margin-top: 10px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     padding: 20px;

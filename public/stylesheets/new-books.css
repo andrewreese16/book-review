@@ -1,6 +1,5 @@
-/* General Container */
 .new-body{
-  background: url('/assets/books.jpeg');
+  background: url('/assets/books-show.jpeg');
 }
 .container {
   max-width: 800px;
@@ -8,47 +7,44 @@
   padding: 20px;
 }
 
-/* Card */
 .card {
   padding: 20px;
-  background-color: #ffffff; /* Clean white background */
-  border-radius: 10px; /* Softer rounded corners */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-/* Card Header */
+
 .card h1 {
-  font-size: 1.875rem; /* Slightly smaller font size for a modern look */
+  font-size: 1.875rem;
   margin-bottom: 15px;
-  font-weight: 600; /* Medium weight for a clean look */
+  font-weight: 600; 
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 10px;
 }
 
-/* Authentication Links */
+
 .auth-links {
   margin-bottom: 20px;
 }
 
 .auth-links .btn {
-  margin-right: 12px; /* Maintain spacing */
+  margin-right: 12px; 
 }
 
-/* Book Form */
 .book-form {
   display: flex;
   flex-direction: column;
 }
 
-/* Form Groups */
 .form-group {
   margin-bottom: 20px;
 }
@@ -64,22 +60,20 @@
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #dcdcdc; /* Lighter border for a softer look */
-  border-radius: 8px; /* Consistent with button */
+  border: 1px solid #dcdcdc;
+  border-radius: 8px; 
   font-size: 1rem;
   box-sizing: border-box;
 }
 
-/* Textarea */
 .form-group textarea {
   resize: vertical;
 }
 
-/* Buttons */
 .btn {
   display: inline-block;
-  padding: 14px 28px; /* Larger button for better usability */
-  border-radius: 8px; /* Match rounded corners */
+  padding: 14px 28px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
   text-align: center;
@@ -88,41 +82,37 @@
   cursor: pointer;
 }
 
-/* Primary Button */
 .btn-primary {
   background-color: var(--primary-color);
-  color: #ffffff; /* White text for contrast */
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: #004a8d; /* Darker shade on hover */
+  background-color: #004a8d;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Secondary Button */
 .btn-secondary {
   background-color: var(--secondary-color);
-  color: #ffffff; /* White text for contrast */
+  color: #ffffff;
 }
 
 .btn-secondary:hover {
-  background-color: #1e7e34; /* Darker shade on hover */
+  background-color: #1e7e34;
 }
 
-/* Back Button */
 .btn-back {
   display: inline-block;
   margin-top: 20px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    padding: 15px; /* Slightly less padding on smaller screens */
+    padding: 15px;
   }
 
   .card {
-    padding: 15px; /* Adjusted padding for mobile */
+    padding: 15px;
   }
 
   .card h1 {

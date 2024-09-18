@@ -4,15 +4,17 @@
   font-family: "Arial", sans-serif;
 }
 
+.hero{
+  background: url('/assets/light.webp')no-repeat center center/cover;
+}
+
 .hero {
   height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
   padding: 40px 20px;
-  border-radius: 12px;
 }
 
 .hero-content {
@@ -23,13 +25,14 @@
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: 600;
-  color: #333;
+  color: black;
 }
 
 .welcome-message {
-  font-size: 1rem;
+  font-size: 2rem;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 20px;
-  color: #666;
+  color: black;
 }
 
 .cta-buttons {
