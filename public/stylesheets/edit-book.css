@@ -1,5 +1,6 @@
-.edit-body{
-  background: url("/assets/booktwo.webp") no-repeat center center/cover;;
+.edit-body {
+  background: url("https://images.pexels.com/photos/220326/pexels-photo-220326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
 }
 .container {
   max-width: 800px;

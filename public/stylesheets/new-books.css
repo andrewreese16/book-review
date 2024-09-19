@@ -1,5 +1,5 @@
-.new-body{
-  background: url('/assets/books-show.jpeg');
+.new-body {
+  background: url("https://images.pexels.com/photos/2177482/pexels-photo-2177482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 .container {
   max-width: 800px;
@@ -18,26 +18,24 @@
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .card h1 {
   font-size: 1.875rem;
   margin-bottom: 15px;
-  font-weight: 600; 
+  font-weight: 600;
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 10px;
 }
-
 
 .auth-links {
   margin-bottom: 20px;
 }
 
 .auth-links .btn {
-  margin-right: 12px; 
+  margin-right: 12px;
 }
 
 .book-form {
@@ -61,7 +59,7 @@
   width: 100%;
   padding: 12px;
   border: 1px solid #dcdcdc;
-  border-radius: 8px; 
+  border-radius: 8px;
   font-size: 1rem;
   box-sizing: border-box;
 }
