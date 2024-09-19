@@ -2,22 +2,29 @@ const express = require("express");
 const router = express.Router();
 const BookModel = require("../models/book");
 
-router.get("/search", async function (req, res) {
+router.get("/", async function (req, res) {
   try {
-    const searchQuery = req.query.q;
-    if (!searchQuery) {
-      return res.redirect("/books");
+    let query = {};
+    if (req.query.type && req.query.type !== "All") {
+      query.type = req.query.type;
     }
-    const books = await BookModel.find({
-      $or: [
-        { title: { $regex: searchQuery, $options: "i" } },
-        { author: { $regex: searchQuery, $options: "i" } },
-        { description: { $regex: searchQuery, $options: "i" } },
-      ],
+    if (req.query.q) {
+      query.$or = [
+        { title: { $regex: req.query.q, $options: "i" } },
+        { author: { $regex: req.query.q, $options: "i" } },
+        { description: { $regex: req.query.q, $options: "i" } },
+      ];
+    }
+    const books = await BookModel.find(query);
+    const types = await BookModel.distinct("type");
+    res.render("books/index", {
+      books,
+      types,
+      selectedType: req.query.type || "All",
+      searchQuery: req.query.q || "",
     });
-    res.render("books/index", { books, searchQuery });
   } catch (err) {
-    res.status(500).send("Error searching for books");
+    res.status(500).send("Error getting books");
   }
 });
 
@@ -40,6 +47,7 @@ router.post("/", async function (req, res) {
       title: req.body.title,
       author: req.body.author,
       description: req.body.description,
+      type: req.body.type,
       createdBy: req.session.user._id,
     });
     await newBook.save();
@@ -76,6 +84,7 @@ router.put("/:id", async function (req, res) {
       title: req.body.title,
       author: req.body.author,
       description: req.body.description,
+      type: req.body.type,
     });
     res.redirect(`/books/${updatedBook._id}`);
   } catch (err) {

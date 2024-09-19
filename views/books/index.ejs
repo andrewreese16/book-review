@@ -10,19 +10,31 @@
   <body class="book-index">
     <%- include('../partials/_navbar.ejs') %>
     <header class="hero" aria-label="background image of light sky">
-      <form action="/books/search" method="GET" class="search-form">
+      <form action="/books" method="GET" class="search-filter-form">
         <input
           type="text"
           name="q"
           placeholder="Search Books and Authors..."
-          value="<%= locals.searchQuery || '' %>"
+          value="<%= searchQuery %>"
         />
+        <select name="type" id="type">
+          <option value="All" <%= selectedType === 'All' ? 'selected' : '' %>>All Types</option>
+          <% types.forEach(type => { %>
+            <option value="<%= type %>" <%= selectedType === type ? 'selected' : '' %>><%= type %></option>
+          <% }); %>
+        </select>
         <button type="submit">Search</button>
       </form>
-      <% if (locals.searchQuery) { %>
+      <% if (searchQuery || selectedType !== 'All') { %>
       <p class="search-results-info">
-        Showing results for "<%= searchQuery %>".
-        <a href="/books" class="clear-search">Clear search</a>
+        <% if (searchQuery) { %>
+          Showing results for "<%= searchQuery %>"
+        <% } %>
+        <% if (selectedType !== 'All') { %>
+          <% if (searchQuery) { %> and <% } %>
+          filtered by type: <%= selectedType %>
+        <% } %>
+        <a href="/books" class="clear-search">Clear filters</a>
       </p>
       <% } %>
 
@@ -49,6 +61,7 @@
           <a class="book-link" href="/books/<%= book._id %>">
             <h3><%= book.title %></h3>
             <p>By <%= book.author %></p>
+            <p>Type: <%= book.type %></p>
           </a>
         </div>
         <% }) %>

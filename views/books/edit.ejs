@@ -51,9 +51,22 @@
               name="description"
               rows="4"
               class="form-control"
-            >
-<%= book.description %></textarea
-            >
+            ><%= book.description %></textarea>
+          </div>
+          <div class="form-group">
+            <label for="type">Type:</label>
+            <select id="type" name="type" class="form-control" required>
+              <option value="Fiction" <%= book.type === 'Fiction' ? 'selected' : '' %>>Fiction</option>
+              <option value="Non-Fiction" <%= book.type === 'Non-Fiction' ? 'selected' : '' %>>Non-Fiction</option>
+              <option value="Mystery" <%= book.type === 'Mystery' ? 'selected' : '' %>>Mystery</option>
+              <option value="Science Fiction" <%= book.type === 'Science Fiction' ? 'selected' : '' %>>Science Fiction</option>
+              <option value="Fantasy" <%= book.type === 'Fantasy' ? 'selected' : '' %>>Fantasy</option>
+              <option value="Biography" <%= book.type === 'Biography' ? 'selected' : '' %>>Biography</option>
+              <option value="Novel" <%= book.type === 'Novel' ? 'selected' : '' %>>Novel</option>
+              <option value="Short Story" <%= book.type === 'Short Story' ? 'selected' : '' %>>Short Story</option>
+              <option value="Poem" <%= book.type === 'Poem' ? 'selected' : '' %>>Poem</option>
+              <option value="Other" <%= book.type === 'Other' ? 'selected' : '' %>>Other</option>
+            </select>
           </div>
           <button type="submit" class="btn btn-primary">Update Book</button>
         </form>

@@ -28,6 +28,22 @@ const bookSchema = new mongoose.Schema({
     required: true,
   },
   description: String,
+  type: {
+    type: String,
+    required: true,
+    enum: [
+      "Fiction",
+      "Non-Fiction",
+      "Mystery",
+      "Science Fiction",
+      "Fantasy",
+      "Biography",
+      "Novel",
+      "Short Story",
+      "Poem",
+      "Other",
+    ],
+  },
   review: [reviewSchema],
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
