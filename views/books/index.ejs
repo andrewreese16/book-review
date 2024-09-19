@@ -18,7 +18,7 @@
           value="<%= searchQuery %>"
         />
         <select name="type" id="type">
-          <option value="All" <%= selectedType === 'All' ? 'selected' : '' %>>All Types</option>
+          <option value="All" <%= selectedType === 'All' ? 'selected' : '' %>>All Genres</option>
           <% types.forEach(type => { %>
             <option value="<%= type %>" <%= selectedType === type ? 'selected' : '' %>><%= type %></option>
           <% }); %>
@@ -61,7 +61,7 @@
           <a class="book-link" href="/books/<%= book._id %>">
             <h3><%= book.title %></h3>
             <p>By <%= book.author %></p>
-            <p>Type: <%= book.type %></p>
+            <p>Genre: <%= book.type %></p>
           </a>
         </div>
         <% }) %>
