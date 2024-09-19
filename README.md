@@ -45,6 +45,11 @@ Welcome to the Book Review App! This application allows users to manage books, w
 
 
 ## Check out my User Stories [here](user-stories.md)
+
+## Future Plans
+- Add the reCAPTCHA feature to ensure only humans are creating accounts
+- Add the feature to allow users to follow each other
+- Possibly turn into a mobile app
    
 ## Installation
    To set up the Book Review App locally, follow these steps:
