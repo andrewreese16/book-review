@@ -21,7 +21,7 @@
 
         <% if (user && book.createdBy && book.createdBy.equals(user._id)) { %>
         <div class="book-actions">
-          <a href="/books/<%= book._id %>/edit" class="btn btn-secondary"
+          <a href="/books/<%= book._id %>/edit" class="btn btn-edit"
             >Edit Book</a
           >
           <form
@@ -80,13 +80,14 @@
             />
           </div>
           <button type="submit" class="btn btn-primary">Submit Review</button>
+          <a class="btn btn-primary" href="/books">Back to book collection</a>
         </form>
         <% } else { %>
         <div class="cta-section">
-          <p>Sign in to add a review or contribute to our book collection!</p>
+          <p>Sign in or sign up to add a review or contribute to our book collection!</p>
           <div class="cta-buttons">
-            <a href="/auth/sign-up" class="btn btn-primary">Sign Up</a>
-            <a href="/auth/sign-in" class="btn btn-secondary">Sign In</a>
+            <a href="/auth/sign-up" class="btn btn-sign">Sign Up</a>
+            <a href="/auth/sign-in" class="btn btn-sign">Sign In</a>
           </div>
         </div>
         <% } %>
