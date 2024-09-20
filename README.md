@@ -46,6 +46,8 @@ Welcome to the Book Review App! This application allows users to manage books, w
 
 ## Check out my User Stories [here](user-stories.md)
 
+## Click [here](https://trello.com/invite/b/66e82e85c1ad2244f5dd7172/ATTI41a8e774282c138f64bb179539333a39735BC5F5/book-review-app) to view my full planning materials.
+
 ## Future Plans
 - Add the reCAPTCHA feature to ensure only humans are creating accounts
 - Add the feature to allow users to follow each other
