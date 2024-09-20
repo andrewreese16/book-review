@@ -7,13 +7,13 @@
 .hero {
   background: url("https://images.pexels.com/photos/880871/pexels-photo-880871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
-  min-height: 200px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px 10px;
 }
 
 .hero-content {
@@ -21,50 +21,50 @@
 }
 
 .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
   font-weight: 600;
   color: black;
 }
 
 .welcome-message {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-family: Georgia, "Times New Roman", Times, serif;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: black;
 }
 
-/* Updated Search and filter form styling */
 .search-filter-form {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
   background-color: transparent;
-  padding: 15px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .search-filter-form input[type="text"],
 .search-filter-form select,
 .search-filter-form button {
-  padding: 10px 15px;
-  border: 2px solid #007bff;
-  border-radius: 20px;
-  font-size: 1rem;
-  margin: 5px;
+  padding: 8px 12px;
+  border: 1px solid #007bff;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin: 3px;
   outline: none;
 }
 
 .search-filter-form input[type="text"] {
-  flex: 1 1 200px;
+  flex: 1 1 150px;
   min-width: 0;
 }
 
 .search-filter-form select {
-  flex: 1 1 150px;
+  flex: 1 1 120px;
   background-color: white;
   cursor: pointer;
 }
@@ -83,20 +83,20 @@
 }
 
 .search-results-info {
-  margin-top: 15px;
-  font-size: 1rem;
+  margin-top: 10px;
+  font-size: 0.9rem;
   color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px 20px;
-  border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  padding: 8px 15px;
+  border-radius: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .clear-search {
   color: #007bff;
   text-decoration: none;
   font-weight: bold;
-  margin-left: 10px;
+  margin-left: 8px;
   transition: color 0.3s ease;
 }
 
@@ -105,58 +105,27 @@
   text-decoration: underline;
 }
 
-.cta-buttons {
-  margin-top: 20px;
-}
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: 600;
-  display: inline-block;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  margin: 0 10px;
-  color: #fff;
-}
-
-.btn-primary {
-  background-color: #007bff;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.btn-secondary {
-  background-color: #28a745;
-}
-
-.btn-secondary:hover {
-  background-color: #218838;
-}
-
 .book-collection {
-  padding: 20px;
+  padding: 15px;
 }
 
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
   justify-content: center;
 }
 
 .book-card {
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
   transition: all 0.3s ease;
 }
 
 .book-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .book-link {
@@ -165,8 +134,8 @@
 }
 
 .book-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.4rem;
+  margin: 0 0 8px;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #007bff;
 }
@@ -174,30 +143,52 @@
 .book-card p {
   margin: 0;
   color: #555;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: 120px;
+    padding: 15px 5px;
+  }
+
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
   }
 
   .welcome-message {
-    font-size: 0.9rem;
-  }
-
-  .book-card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
 
   .search-filter-form {
-    flex-direction: column;
-    align-items: stretch;
+    padding: 8px;
   }
 
   .search-filter-form input[type="text"],
   .search-filter-form select,
   .search-filter-form button {
     width: 100%;
-    margin: 5px 0;
+    margin: 3px 0;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .book-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .book-card p {
+    font-size: 0.85rem;
+  }
+
+  .book-collection {
+    padding: 10px;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
   }
 }
