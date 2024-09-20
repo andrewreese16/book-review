@@ -38,7 +38,6 @@ app.use(
 );
 app.use(passUsertoView);
 
-
 app.get("/", (req, res) => {
   res.render("index.ejs", {
     user: req.session.user,
@@ -46,7 +45,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", authController);
-app.use(isLoggedIn);
 app.use("/books", bookController);
 app.use("/books/:bookId/reviews", reviewController);
 

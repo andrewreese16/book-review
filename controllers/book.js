@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const BookModel = require("../models/book");
+const isLoggedIn = require("../middleware/isLoggedIn");
 
 router.get("/", async function (req, res) {
   try {
@@ -28,20 +29,11 @@ router.get("/", async function (req, res) {
   }
 });
 
-router.get("/", async function (req, res) {
-  try {
-    const books = await BookModel.find({});
-    res.render("books/index", { books });
-  } catch (err) {
-    res.status(500).send("Error getting books");
-  }
-});
-
-router.get("/new", function (req, res) {
+router.get("/new", isLoggedIn, function (req, res) {
   res.render("books/new");
 });
 
-router.post("/", async function (req, res) {
+router.post("/", isLoggedIn, async function (req, res) {
   try {
     const newBook = new BookModel({
       title: req.body.title,
@@ -69,30 +61,39 @@ router.get("/:id", async function (req, res) {
   }
 });
 
-router.get("/:id/edit", async function (req, res) {
+router.get("/:id/edit", isLoggedIn, async function (req, res) {
   try {
     const book = await BookModel.findById(req.params.id);
-    res.render("books/edit", { book });
+    if (book.createdBy.equals(req.session.user._id)) {
+      res.render("books/edit", { book });
+    } else {
+      res.status(403).send("You do not have permission to edit this book.");
+    }
   } catch (err) {
     res.status(404).send("Book not found");
   }
 });
 
-router.put("/:id", async function (req, res) {
+router.put("/:id", isLoggedIn, async function (req, res) {
   try {
-    const updatedBook = await BookModel.findByIdAndUpdate(req.params.id, {
-      title: req.body.title,
-      author: req.body.author,
-      description: req.body.description,
-      type: req.body.type,
-    });
-    res.redirect(`/books/${updatedBook._id}`);
+    const book = await BookModel.findById(req.params.id);
+    if (book.createdBy.equals(req.session.user._id)) {
+      const updatedBook = await BookModel.findByIdAndUpdate(req.params.id, {
+        title: req.body.title,
+        author: req.body.author,
+        description: req.body.description,
+        type: req.body.type,
+      });
+      res.redirect(`/books/${updatedBook._id}`);
+    } else {
+      res.status(403).send("You do not have permission to update this book.");
+    }
   } catch (err) {
     res.status(400).send("Error updating book");
   }
 });
 
-router.delete("/:id", async function (req, res) {
+router.delete("/:id", isLoggedIn, async function (req, res) {
   try {
     const book = await BookModel.findById(req.params.id);
     if (book.createdBy.equals(req.session.user._id)) {
