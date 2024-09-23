@@ -10,7 +10,6 @@ Welcome to the Book Review App! This application allows users to manage books, w
 
     - Register for an account to access personalized features.
     - Log in and log out from any page.
-    - Redirect to the homepage or login page after logging out.
 
 2. **Book Management**
 
@@ -31,7 +30,7 @@ Welcome to the Book Review App! This application allows users to manage books, w
    - Receive error messages for missing fields or failed operations.
 ## Technologies Used
 - EJS
-- Node.JS
+- Node
 - MongoDB
 - Express.JS
 - CSS
@@ -53,30 +52,8 @@ Welcome to the Book Review App! This application allows users to manage books, w
 ## Click [here](https://trello.com/invite/b/66e82e85c1ad2244f5dd7172/ATTI41a8e774282c138f64bb179539333a39735BC5F5/book-review-app) to view my full planning materials.
 
 ## Future Plans
-- Add the reCAPTCHA feature to ensure only humans are creating accounts
+- Add the reCAPTCHA feature
 - Add the feature to allow users to follow each other
-- Possibly turn into a mobile downloadable app
+- Possibly turn into a downloadable mobile app
+- Add an admin login feature for managing the content
    
-## Installation
-   To set up the Book Review App locally, follow these steps:
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/book-review-app.git
-cd book-review-app
-```
-Install dependencies:
-```bash
-npm install
-```
-Create a .env file:
-Copy the .env.example file to .env and update it with your configuration settings.
-
-```bash
-cp .env.example .env
-```
-Start the application:
-``` bash
-npm start
-```
