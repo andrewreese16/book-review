@@ -1,4 +1,4 @@
-# Book Review App
+# Reader Realm 
 Welcome to the Reader Realm! This application allows users to manage books, and write reviews. Below you'll find a comprehensive overview of the app's features, and user stories.
 
 ![Application image](/public/assets/project2.png)
